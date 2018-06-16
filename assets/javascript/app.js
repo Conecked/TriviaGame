@@ -49,6 +49,3 @@ function stop() {
 
 // create logic to check answers
 
-var answerValue = $('input[name="answers"]:checked').val(); 
-console.log(answerValue);
-
