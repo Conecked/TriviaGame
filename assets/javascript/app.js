@@ -49,7 +49,6 @@ function stop() {
 
 // create logic to check answers
 
-if ("#question", value="correct") {
-    trivia.correct++
-}
+var answerValue = $('input[name="answers"]:checked').val(); 
+console.log(answerValue);
 
