@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trivia Game</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Cinzel+Decorative|Gloria+Hallelujah|Permanent+Marker|Shadows+Into+Light+Two"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src='assets/javaScript/app.js'></script>
+</head>
+
+<body>
+    
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title">Who's Your Padre?</h1>
+            <input type="button" name="answer" value="Let's Start" onclick="showDiv()" id="start" />
+            <div id="welcomeDiv" style="display:none;" class="answer_list">
+                <h4 class="card-subtitle mb-2 text-muted" id="timeRemaining">Time Remaining: 25 seconds</h4>
+                <br>
+                <form name="trivia" method="post" name="buttons" id="trivia" onsubmit="return false">
+
+                    <p class="card-text" id="question">
+
+                        <h3>In what year was the first appearance of the San Diego Padres?</h3>
+                        <input id="answer" type="radio" name="group1" value="wrong">1969
+                        <input id="answer" type="radio" name="group1" value="correct">1936
+                        <input id="answer" type="radio" name="group1" value="wrong">1968
+                        <input id="answer" type="radio" name="group1" value="wrong">1903
+
+                    </p>
+                    <br>
+                    <p class="card-text" id="question">
+
+                        <h3>Who is the Home Run leader of the Padres?</h3>
+                        <input id="answer" type="radio" name="group2" value="wrong">Tony Gwynn
+                        <input id="answer" type="radio" name="group2" value="wrong">Dave Winfield
+                        <input id="answer" type="radio" name="group2" value="correct">Nate Colbert
+                        <input id="answer" type="radio" name="group2" value="wrong">Greg Vaughn
+
+                    </p>
+                    <br>
+                    <p class="card-text" id="question">
+
+                        <h3>In what year did the San Diego Padres first join the major leagues?</h3>
+                        <input id="answer" type="radio" name="group3" value="wrong">1968
+                        <input id="answer" type="radio" name="group3" value="correct">1969
+                        <input id="answer" type="radio" name="group3" value="wrong">1967
+                        <input id="answer" type="radio" name="group3" value="wrong">1971
+
+                    </p>
+                    <br>
+                    <p class="card-text" id="question">
+
+                        <h3>Who is the All-Time wins leader for the Padres?</h3>
+                        <input id="answers" type="radio" name="group4" value="wrong">Jake Peavy
+                        <input id="answers" type="radio" name="group4" value="wrong">Kevin Brown
+                        <input id="answers" type="radio" name="group4" value="wrong">Randy Jones
+                        <input id="answers" type="radio" name="group4" value="correct">Eric Snow
+
+                    </p>
+                    <br>
+                    <p class="card-text" id="question">
+
+                        <h3>Who is the Padres All-Time batting average leader?</h3>
+                        <input id="answers" type="radio" name="group5" value="wrong">Nate Colbert
+                        <input id="answers" type="radio" name="group5" value="wrong">Dave Winfield
+                        <input id="answers" type="radio" name="group5" value="correct">Tony Gwynn
+                        <input id="answers" type="radio" name="group5" value="wrong">Steve Garvey
+
+                    </p>
+                    <br>
+                    <p class="card-text" id="question">
+
+                        <h3>What is the Padres All-Time record? (Major Leagues)</h3>
+                        <input id="answers" type="radio" name="group6" value="wrong">3,391-3972
+                        <input id="answers" type="radio" name="group6" value="correct">3,417-3,946
+                        <input id="answers" type="radio" name="group6" value="wrong">3,216-4,147
+                        <input id="answers" type="radio" name="group6" value="wrong">4,147-3,216
+
+                    </p>
+                    <br>
+                    <p class="card-text" id="question">
+
+                        <h3>What is the best season record the Padres have recorded?</h3>
+                        <input id="answers" type="radio" name="group7" value="wrong">99-63
+                        <input id="answers" type="radio" name="group7" value="correct">98-64
+                        <input id="answers" type="radio" name="group7" value="wrong">101-61
+                        <input id="answers" type="radio" name="group7" value="wrong">91-71
+
+                    </p>
+                    <br>
+                    <p class="card-text" id="question">
+
+                        <h3>In what year(s) did the Padres win the NL pennant?</h3>
+                        <input id="answers" type="radio" name="group8" value="correct">1984, 1998
+                        <input id="answers" type="radio" name="group8" value="wrong">1999
+                        <input id="answers" type="radio" name="group8" value="wrong">1983, 1984, 1999
+                        <input id="answers" type="radio" name="group8" value="wrong">1986, 1994, 1998
+
+                    </p>
+                    <br>
+                    <p class="card-text" id="question">
+
+                        <h3>Who is the Padres mascot?</h3>
+                        <input id="answers" type="radio" name="group9" value="wrong">Boltman
+                        <input id="answers" type="radio" name="group9" value="wrong">The Famous Chicken
+                        <input id="answers" type="radio" name="group9" value="correct">Swinging Friar
+                        <input id="answers" type="radio" name="group9" value="wrong">Friar Tuck
+
+                    </p>
+                    <br>
+                    <p class="card-text" id="question">
+
+                        <h3>How many Padres are in the Hall of Fame?</h3>
+                        <input id="answers" type="radio" name="group10" value="correct">3
+                        <input id="answers" type="radio" name="group10" value="wrong">1
+                        <input id="answers" type="radio" name="group10" value="wrong">5
+                        <input id="answers" type="radio" name="group10" value="wrong">2
+                </form>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- <script type="text/javaScript" src="assets/javaScript/app.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script> -->
+</body>
+
+</html>
