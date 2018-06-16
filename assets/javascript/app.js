@@ -17,7 +17,7 @@ var trivia = {
 // display Time Remaining: 25sec, start countdown, show countdown
 // create logic for start button
 
-var number = 5;
+var number = 25;
 
 var intervalId;
 
@@ -39,9 +39,6 @@ function decrement() {
     if (number === 0) {
 
         stop();
-
-        // alert("Time Up!");
-
 
         $("#welcomeDiv").html("<p><h2>All Done</h2></p>").append("<p><h5>Correct Answers: " + trivia.correct + "</h5></p>").append("<p><h5>Wrong Answers: " + trivia.incorrect + "</h5></p>").append("<p><h5>Unanswered: " + trivia.unanswered + "</h5></p>")
     }
@@ -69,6 +66,7 @@ console.log(radios);
 var value = radios.length>0? radios[0].value.name: null;
 
 if (radios.value === correctAnswer && radio.checked) {
+    console.log(value);
     trivia.correct++;
     console.log(radios.value);
 }
