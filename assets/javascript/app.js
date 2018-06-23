@@ -49,3 +49,45 @@ function stop() {
 
 // create logic to check answers
 
+if ($('input[name="group1"]:checked').val() === "correct") {
+    correct++;
+}
+console.log();
+
+// if (document.getElementsByName("answers").checked) {
+//     correct++
+// }
+
+// $("#add-user").on("click", "#trivia", function () {
+//     console.log("CLICK", $(this))
+//    var correctAnswer = $.each($("input[id=answers]:checked").val() === "correct"); 
+
+//    var wrongAnswer = $.each($("input[id=answers]:checked").val() === "wrong");
+
+//    if (correctAnswer) {
+//        trivia.correct++;
+//    } else if (wrongAnswer) {
+//        trivia.incorrect++;
+//    } else trivia.unanswered++;
+
+// });
+
+
+// function results() {
+//     if (correctAnswer) {
+//         trivia.correct++;
+//     } else trivia.incorrect++
+// }
+
+// var form = document.trivia;
+// var radios = form.elements['answer'];
+
+// console.log(radios.value);
+
+// var value = radios.length>0? radios[0].value.name: null;
+
+// if (radios.value === correctAnswer && radio.checked) {
+//     console.log(value);
+//     trivia.correct++;
+//     console.log(radios.value);
+// }
